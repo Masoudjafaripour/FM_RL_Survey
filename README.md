@@ -1,7 +1,5 @@
 ## Awesome LLM- and VLM-Integrated Reinforcement Learning [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-<img src="./images/llm_rl_taxonomy.png" width="96%" height="96%">
-
 This repository accompanies our survey paper:
 
 **The Evolving Landscape of LLM- and VLM-Integrated Reinforcement Learning**
