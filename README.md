@@ -61,10 +61,10 @@ We also discuss:
 
 ## 🤖 LLM/VLM as Agent
 
-**Parametric (fine-tuned)**: AGILE, TWOSOME, POAD, Retroformer, Zhai et al.
-**Non-parametric**: Reflexion, ExpeL, ICPI, RLingua, REMEMBERER
+### Parametric LLM/VLM Agents
 
-### Table of Parametric LLM/VLM Agents
+**Parametric (fine-tuned)**: AGILE, TWOSOME, POAD, Retroformer, Zhai et al.
+
 
 | Method                           | Model(s)               | FT  | RL Role                  | Metrics          | Code                                                                 |
 | -------------------------------- | ---------------------- | --- | ------------------------ | ---------------- | -------------------------------------------------------------------- |
@@ -75,7 +75,10 @@ We also discuss:
 | GLAM \[Carta et al., 2023]       | FLAN-T5                | ✓   | $\pi_l, v_l, \text{rft}$ | se, gen          | [Link](https://github.com/flowersteam/Grounding_LLMs_with_online_RL) |
 | Zhai et al. \[Zhai et al., 2024] | LLaVA-v1.6-Mistral     | ✓\* | $\pi_l, v_l, \text{rft}$ | sr               | [Link](https://github.com/RL4VLM/RL4VLM)                             |
 
-### Table of Non-Parametric LLM/VLM Agents
+
+### Non-Parametric LLM/VLM Agents
+
+**Non-parametric**: Reflexion, ExpeL, ICPI, RLingua, REMEMBERER
 
 | Method                            | Model(s)                    | FT | RL Role                | Metrics          | Code                                            |
 | --------------------------------- | --------------------------- | -- | ---------------------- | ---------------- | ----------------------------------------------- |
@@ -87,21 +90,14 @@ We also discuss:
 | Xu et al. \[Xu et al., 2024]      | GPT-3.5-Turbo               | ×  | $\pi_l, v_l$           | sr, rob          | -                                               |
 | LangGround \[Li et al., 2024]     | GPT-4                       | ×  | $\pi_l$                | sr, gen, se, int | [Link](https://github.com/romanlee6/langground) |
 
-| Method                                              | Type           | Code |
-| --------------------------------------------------- | -------------- | ---- |
-| [AGILE](https://github.com/bytarnish/AGILE)         | Parametric     | ✅    |
-| [Reflexion](https://github.com/noahshinn/reflexion) | Non-parametric | ✅    |
-| [TWOSOME](https://github.com/WeihaoTan/TWOSOME)     | Parametric     | ✅    |
-| [ExpeL](https://github.com/LeapLabTHU/ExpeL)        | Non-parametric | ✅    |
-
 ---
 
 ## 🧭 LLM/VLM as Planner
 
-**Comprehensive planners**: SayTap, PSL, LMA3, Inner Monologue
-**Incremental planners**: SayCan, BOSS, AdaRefiner, LLM4Teach
+### Comprehensive Planning Approaches
 
-### Table of Comprehensive Planning Approaches
+**Comprehensive planners**: SayTap, PSL, LMA3, Inner Monologue
+
 
 | Method                                | Model(s)      | FT | RL Role      | Metrics          | Code                                                 |
 | ------------------------------------- | ------------- | -- | ------------ | ---------------- | ---------------------------------------------------- |
@@ -113,7 +109,10 @@ We also discuss:
 | When2Ask \[Hu et al., 2024]           | Vicuna        | ×  | $\pi, v$     | sr               | -                                                    |
 | Inner Monologue \[Huang et al., 2022] | GPT-3, PaLM   | ×  | $\pi, v$     | sr, rob, al      | -                                                    |
 
-### Table of Incremental Planning Approaches
+### Incremental Planning Approaches
+
+**Incremental planners**: SayCan, BOSS, AdaRefiner, LLM4Teach
+
 
 | Method                           | Model(s)              | FT  | RL Role                            | Metrics           | Code                                                                          |
 | -------------------------------- | --------------------- | --- | ---------------------------------- | ----------------- | ----------------------------------------------------------------------------- |
@@ -123,21 +122,15 @@ We also discuss:
 | BOSS \[Zhang et al., 2023b]      | Llama                 | ×   | $\pi_l, v_l, \text{rft}, \tau_\pi$ | sr, gen, rob, se  | -                                                                             |
 | Text2Motion \[Lin et al., 2023]  | Codex, GPT-3.5        | ×   | $\pi, v$                           | sr, gen, int      | -                                                                             |
 
-
-| Method                                                                          | Strategy    | Code |
-| ------------------------------------------------------------------------------- | ----------- | ---- |
-| [SayCan](https://github.com/google-research/google-research/tree/master/saycan) | Incremental | ✅    |
-| [AdaRefiner](https://github.com/PKU-RL/AdaRefiner)                              | Incremental | ✅    |
-| [Inner Monologue](https://arxiv.org/abs/2212.01599)                             | Hybrid      | -    |
-
 ---
 
 ## 🎯 LLM/VLM as Reward
 
-**Reward Function**: Text2Reward, Eureka, Zeng et al.
-**Reward Model**: VLM-RM, MineCLIP, RL-VLM-F
+### Reward Function Approaches
 
-### Table of Reward Function Approaches
+**Reward Function**: Text2Reward, Eureka, Zeng et al.
+
+
 
 | Method                          | Model(s) | FT | RL Role            | Metrics         | Code                                              |
 | ------------------------------- | -------- | -- | ------------------ | --------------- | ------------------------------------------------- |
@@ -145,7 +138,9 @@ We also discuss:
 | Zeng et al. \[2024]             | GPT-4    | ×  | $\pi, \tau_\pi$    | sr, se          | -                                                 |
 | Eureka \[Ma et al., 2024]       | GPT-4    | ×  | $\pi, v, \tau_\pi$ | sr, gen, se, al | [Link](https://github.com/eureka-research/Eureka) |
 
-### Table of Reward Model Approaches
+### Reward Model Approaches
+
+**Reward Model**: VLM-RM, MineCLIP, RL-VLM-F
 
 | Method                           | Model(s)           | FT  | RL Role      | Metrics          | Code                                               |
 | -------------------------------- | ------------------ | --- | ------------ | ---------------- | -------------------------------------------------- |
@@ -155,13 +150,6 @@ We also discuss:
 | RL-VLM-F \[Wang et al., 2024]    | Gemini-Pro, GPT-4V | ×   | $\pi, v$     | sr, rew, se      | [Link](https://github.com/yufeiwang63/RL-VLM-F)    |
 | VLM-RM \[Rocamonde et al., 2024] | CLIP               | ×   | $\pi, v$     | sr, al           | [Link](https://github.com/AlignmentResearch/vlmrm) |
 | MineCLIP \[Fan et al., 2022]     | CLIP               | ✓\* | $\pi_l, v_l$ | sr, gen, se, al  | [Link](https://github.com/MineDojo/MineDojo)       |
-
-| Method                                                 | Reward Type | Code |
-| ------------------------------------------------------ | ----------- | ---- |
-| [Text2Reward](https://github.com/xlang-ai/text2reward) | Function    | ✅    |
-| [Eureka](https://github.com/eureka-research/Eureka)    | Function    | ✅    |
-| [RL-VLM-F](https://github.com/yufeiwang63/RL-VLM-F)    | Model       | ✅    |
-| [MineDojo](https://github.com/MineDojo/MineDojo)       | Model       | ✅    |
 
 ---
 
